@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-164 -14 660 128" role="img" aria-label="V3rso Impressão 3D">
+  <title>V3rso Impressão 3D</title>
+  <defs>
+    <mask id="m2" maskUnits="userSpaceOnUse" x="-164" y="-14" width="660" height="128">
+      <path d="M -128 0 L 22 0 L 36 100 L 106 0 M 134 0 L 184 0 Q 202 0 198 18 L 195 32 Q 191 50 173 50 L 143 50 M 173 50 Q 191 50 187 68 L 184 82 Q 180 100 162 100 L 112 100 M 212 100 L 230 18 Q 234 0 252 0 L 296 0 M 384 0 L 336 0 Q 318 0 314 18 L 311 32 Q 307 50 325 50 L 355 50 Q 373 50 369 68 L 366 82 Q 362 100 344 100 L 296 100 M 432 0 L 464 0 Q 482 0 478 18 L 464 82 Q 460 100 442 100 L 410 100 Q 392 100 396 82 L 410 18 Q 414 0 432 0 Z" fill="none" stroke="#fff" stroke-width="15" stroke-linejoin="round" stroke-linecap="square"/>
+      <path d="M -128 0 L 22 0 L 36 100 L 106 0 M 134 0 L 184 0 Q 202 0 198 18 L 195 32 Q 191 50 173 50 L 143 50 M 173 50 Q 191 50 187 68 L 184 82 Q 180 100 162 100 L 112 100 M 212 100 L 230 18 Q 234 0 252 0 L 296 0 M 384 0 L 336 0 Q 318 0 314 18 L 311 32 Q 307 50 325 50 L 355 50 Q 373 50 369 68 L 366 82 Q 362 100 344 100 L 296 100 M 432 0 L 464 0 Q 482 0 478 18 L 464 82 Q 460 100 442 100 L 410 100 Q 392 100 396 82 L 410 18 Q 414 0 432 0 Z" fill="none" stroke="#000" stroke-width="8.5" stroke-linejoin="round" stroke-linecap="square"/>
+    </mask>
+  </defs>
+  <rect x="-164" y="-14" width="660" height="128" fill="#FFFFFF" mask="url(#m2)"/>
+</svg>
