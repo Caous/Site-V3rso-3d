@@ -4,7 +4,7 @@ import { gsap, reduced, useScene } from '../lib/scroll'
 // Cores de exemplo: a lista real de filamentos ainda precisa ser confirmada com a V3rso.
 const COLORS = [
   ['Branco', '#F6F6F3'],
-  ['Preto', '#2A3136'],
+  ['Preto', '#3A444A'],
   ['Verde', '#1F8A4C'],
   ['Vermelho', '#D8342B'],
   ['Laranja', '#F28A1E'],
@@ -51,8 +51,8 @@ export default function Colors() {
     const ry = gsap.quickTo(spool.current, '--ry', { duration: 0.8, ease: 'power3.out' })
     const move = (e) => {
       const r = panel.getBoundingClientRect()
-      ry(((e.clientX - r.left) / r.width - 0.5) * 34 - 24)
-      rx(((e.clientY - r.top) / r.height - 0.5) * -22 + 8)
+      ry(((e.clientX - r.left) / r.width - 0.5) * 26)
+      rx(((e.clientY - r.top) / r.height - 0.5) * -18)
     }
     panel.addEventListener('pointermove', move)
     return () => panel.removeEventListener('pointermove', move)
@@ -61,7 +61,11 @@ export default function Colors() {
   const pick = (i) => {
     setSel(i)
     if (!reduced && spool.current) {
-      gsap.fromTo(spool.current, { '--spin': 0 }, { '--spin': 360, duration: 0.9, ease: 'power3.out' })
+      gsap.fromTo(
+        spool.current.querySelector('.spool__body'),
+        { scale: 0.9, rotate: -8 },
+        { scale: 1, rotate: 0, duration: 0.8, ease: 'elastic.out(1, 0.6)' },
+      )
     }
   }
 
@@ -89,9 +93,11 @@ export default function Colors() {
             <i className="corner corner--bl" />
             <i className="corner corner--br" />
             <div className="spool" ref={spool} role="img" aria-label={`Carretel de filamento na cor ${COLORS[sel][0]}`}>
-              <div className="spool__disc" />
-              <div className="spool__wind" />
-              <div className="spool__hub" />
+              {/* Render de um carretel com filamento branco; a cor entra por cima em multiply. */}
+              <div className="spool__body">
+                <img src="/img/carretel.webp" alt="" width="720" height="956" />
+                <i className="spool__tint" />
+              </div>
             </div>
             <p className="mono colors__name">{COLORS[sel][0]}</p>
           </div>
